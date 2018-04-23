@@ -1,0 +1,12 @@
++b.vars
+    h3 Vars example:
+    +e.UL.icon-list
+        each item in icons
+            +e.LI.icon-item
+                i(class=`fab ${item}`)
+    +e.UL.people-list
+        each item in people
+            +e.LI.people-item
+                +e.IMG.img(src=`${item.img}`)
+                +e.SPAN.name= item.name
+                +e.SPAN.age= `age: ${item.age}`

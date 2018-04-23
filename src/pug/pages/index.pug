@@ -1,0 +1,24 @@
+extends ../template
+
+block variables
+    - var title = 'Home page'
+    - var bodyFlex = false
+
+block content
+
+    include ../common/header
+
+    +b.MAIN.main.wrp(class=bodyFlex ? 'main-flex' : '')
+        +e.SECTION.hero
+            +e.H1.title Home page ass
+            +e.P.par
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, at doloribus ex id, inventore magnam maxime quae quaerat,
+                br
+                | rerum sequi similique voluptatem! Aperiam consequatur consequuntur, delectus deleniti, dolore eos et ex fugiat incidunt inventore molestiae neque officia pariatur porro praesentium quidem quod reiciendis rem reprehenderit vitae! Aut dolore iusto nulla numquam possimus. Alias architecto dignissimos eligendi enim fuga id porro quae repellendus sit voluptates. Adipisci deleniti dolorem est laudantium magni mollitia nam, natus saepe velit. A ad autem cumque doloremque molestias nihil? Aspernatur blanditiis consectetur corporis dicta explicabo fugit in minima nam pariatur, provident qui quod sequi tenetur velit veniam?
+            include ../examples/modifier-example
+            include ../examples/vars-example
+    include ../common/footer
+
+
+
+
