@@ -32,7 +32,8 @@ $.gulp.task('default', $.gulp.series(
     'scripts',
     'jsVendors',
     'copyFonts',
-    'copyImages'
+    'copyImages',
+    'svgSprite'
   ),
   $.gulp.parallel(
     'watch',

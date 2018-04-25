@@ -9,6 +9,13 @@ include ../../assets/bemto/bemto
 include ./common/vars
 block variables
 
+mixin icon(name, mod)
+  - mod = mod || ''
+  svg(class = mod + '__icon icon ' + name)
+    use(xlink:href = 'img/sprite.svg#' + name)
+
+// - - - - -
+
 doctype html
 html(lang='ru')
 
