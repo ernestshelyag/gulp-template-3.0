@@ -2,7 +2,7 @@
 
 module.exports = function () {
   $.gulp.task('pug', function () {
-    return $.gulp.src($.path.pug + 'pages/*.pug')
+    return $.gulp.src($.config.pug + 'pages/*.pug')
       .pipe($.gp.plumber({
         errorHandler: $.gp.notify.onError(function (err) {
           return {
@@ -12,6 +12,6 @@ module.exports = function () {
         })
       }))
       .pipe($.gp.pug({pretty: true}))
-      .pipe($.gulp.dest($.path.public));
+      .pipe($.gulp.dest($.config.root));
   });
 };

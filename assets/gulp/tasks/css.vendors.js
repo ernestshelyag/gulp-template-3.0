@@ -5,6 +5,6 @@ module.exports = function() {
     return $.gulp.src($.path.cssVendors)
       .pipe($.gp.concatCss('vendors.min.css'))
       .pipe($.gp.csso())
-      .pipe($.gulp.dest($.path.public + 'css/'));
+      .pipe($.gulp.dest($.config.root + 'css/'));
   });
 };

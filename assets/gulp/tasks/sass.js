@@ -3,7 +3,7 @@
 module.exports = function () {
   let processors = [
     $.autoprefixer({
-      browsers: ['last 4 versions'],
+      browsers: $.config.autoprefixerConfig,
       cascade: false
     }),
     $.mqpacker({
@@ -33,12 +33,12 @@ module.exports = function () {
   }
 
   $.gulp.task('sass', function () {
-    return $.gulp.src($.path.sass + 'app.sass')
+    return $.gulp.src($.config.sass + 'app.sass')
       .pipe($.gp.plumber({
         errorHandler: $.gp.notify.onError(function (err) {
           return {
             title: 'SASS',
-            message: err.message,
+            message: err.message
           };
         })
       }))
@@ -46,6 +46,6 @@ module.exports = function () {
       .pipe($.gp.postcss(processors))
       .pipe($.gp.csso())
       .pipe($.gp.rename({ suffix: '.min' }))
-      .pipe($.gulp.dest($.path.public + 'css/'));
+      .pipe($.gulp.dest($.config.root + 'css/'));
   });
 };

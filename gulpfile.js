@@ -10,14 +10,12 @@ global.$ = {
   bs: require('browser-sync').create(),
 
   path: {
-    tasks: require('./assets/gulp/config/tasks.js'),
-    jsVendors: require('./assets/gulp/config/js.vendors.js'),
-    cssVendors: require('./assets/gulp/config/css.vendors.js'),
-    src: 'src/',
-    sass: 'src/sass/',
-    pug: 'src/pug/',
-    public: 'public/'
-  }
+    tasks: require('./assets/gulp/paths/tasks.js'),
+    jsVendors: require('./assets/gulp/paths/js.vendors.js'),
+    cssVendors: require('./assets/gulp/paths/css.vendors.js')
+  },
+
+  config: require('./assets/gulp/config')
 
 };
 
