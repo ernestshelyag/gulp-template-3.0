@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function () {
-  $.gulp.task('scripts', function() {
+  $.gulp.task('scripts', function () {
     return $.gulp.src([
       $.config.src + '**/*.js',
       $.config.src + '**/**/*.js'

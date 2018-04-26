@@ -1,19 +1,21 @@
 ##Quick start
 
-    npm i (yarn)
+    npm i
     npm start
     
 ##Other commands
 
-    npm i -g npm-check-updates
     ncu -u
+    
+To npm update packages (before ` npm i `). Need preinstalled npm-check-updates (` npm i -g npm-check-updates `).
     
 ##About
 
 After "npm start" any time you have a folder "public" with all minified files.
 * no build folder
 * no sourcemaps
-* no bower
+* no Bower
+* no Babel transpilation to ES5
 * Gulp version: 4.0.0-alpha.3
 * Node version: v8.11.1
 

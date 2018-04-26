@@ -10,7 +10,6 @@ module.exports = function () {
       sort: sortMediaQueries
     })
   ];
-
   function isMax (mq) {
     return /max-width/.test(mq);
   }
@@ -31,7 +30,6 @@ module.exports = function () {
     }
     return 1;
   }
-
   $.gulp.task('sass', function () {
     return $.gulp.src($.config.sass + 'app.sass')
       .pipe($.gp.plumber({
